@@ -20,7 +20,7 @@ if [ -n "$2" ];
         git commit -m "$2"
 #
 # pushing file to github by autoauthenticating
-echo -e "${GREEN}Pushing the file to repository${NC}"    
+echo -e "${GREEN}Pushing file to repository${NC}"    
     git push mygithub
     else
         echo -e "${RED}Error: Please write a comment to commit file${NC}"
