@@ -12,7 +12,7 @@ NC='\033[0m'
 if [ -f $1 ];
 then
 git add $1
-echo -e "${GREEN}File added sucessfully${NC}"
+echo -e "${GREEN}File added successfully${NC}"
 #
 # committing file 
 if [ -n "$2" ];
