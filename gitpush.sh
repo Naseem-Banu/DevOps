@@ -12,13 +12,14 @@ NC='\033[0m'
 if [ -f $1 ];
 then
 git add $1
-echo "${GREEN}File added successfully${NC}"
+echo -e "${GREEN}File added successfully${NC}"
 # committing file 
 if [ -n "$2" ];
     then
         git commit -m $2
 # pushing file to github by autoauthenticating
-        git push mygithub
+echo "Pushing the file"    
+    git push mygithub
     else
         echo -e "${RED}Error: Please write a comment to commit file${NC}"
     fi
