@@ -5,18 +5,23 @@
 # script by Naseem
 #
 #
-
+RED='\033[0;31m'
+NC='\033[0m'
+# adding file if exists
 if [ -f $1 ];
 then
 git add $1
+echo "File added"
+# committing file 
 if [ -n "$2" ];
     then
         git commit -m $2
+# pushing file to github by autoauthenticating
         git push mygithub
     else
-        echo -e "33[41m Error: Please write a comment to commit file"
+        echo -e "${RED}Error: Please write a comment to commit file${NC}"
     fi
 else
-    echo -e "33[41m Error: File does not exist"
+    echo -e "${RED}Error: File does not exist${NC}"
 fi
 
