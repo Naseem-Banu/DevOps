@@ -14,9 +14,9 @@ if [ -n "$2" ];
         git commit -m $2
         git push mygithub
     else
-        echo "Error: Please write a comment to commit file"
+        echo -e "33[41m Error: Please write a comment to commit file"
     fi
 else
-    echo "Error: File does not exist"
+    echo -e "33[41m Error: File does not exist"
 fi
 
